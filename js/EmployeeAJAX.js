@@ -47,15 +47,15 @@ makeAJAXCall("GET",getURL,true)
         console.log("Get User Data at: " + showTime() + " data: " +responsetext))
 .catch(err => console.log("Get Error statustext : "+ err.statusText +" status : "+err.status))
 
-const deleteURL = "http://localhost:3000/employees/2";
+const deleteURL = "http://localhost:3000/employees/3";
 
-makeAJAXCall("DELETE", deleteURL, false)
+makeAJAXCall("DELETE", deleteURL, true)
 .then(responsetext => 
     console.log("Deleted User Data at: " + showTime() + " data: " +responsetext))
 .catch(err => console.log("Delete Error statustext : "+ err.statusText +" status : "+err.status))
 
 const postURL = "http://localhost:3000/employees";
-const emplData = {name: "Sravya",salary: "5000"};
+const emplData = {name: "kavya",salary: "5000"};
 makeAJAXCall("POST", postURL, true, emplData)
 .then(responsetext => 
     console.log("Posted User Data at: " + showTime() + " data: " +responsetext))
